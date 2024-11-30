@@ -51,3 +51,62 @@ body.dark-mode .creator-card {
     color: #e0e0e0;
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 }
+
+/* Menú colapsable (Estilo móvil) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #ff6600;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        /* Oculta el menú por defecto */
+        flex-direction: column;
+        /* Cambia a una columna para la lista */
+        background: #222;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.show {
+        display: flex;
+        /* Muestra el menú cuando se activa */
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Muestra el botón hamburguesa */
+    }
+}

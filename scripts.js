@@ -33,3 +33,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    // Alterna la clase "show" en el menú
+    menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("show");
+    });
+
+    // Cierra el menú al hacer clic en un enlace
+    menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("show");
+        });
+    });
+});
