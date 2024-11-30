@@ -6,10 +6,12 @@
         }
 
         header {
-            background: #0d6efd;
+            background: #222;
             color: #fff;
-            padding: 1rem 0;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
         }
 
         header h1 {
