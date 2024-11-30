@@ -1,1 +1,135 @@
-!html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elizines Corporation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #0d6efd;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #0d6efd;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .services, .contact {
+            margin: 2rem 0;
+        }
+
+        .services h2, .contact h2 {
+            color: #0d6efd;
+            margin-bottom: 1rem;
+        }
+
+        .services p, .contact p {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #0d6efd;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Elizines Corporation</h1>
+        <p>Innovando el futuro, hoy.</p>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="#about">Sobre Nosotros</a>
+        <a href="#services">Servicios</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="container">
+        <!-- Sobre Nosotros -->
+        <section id="about">
+            <h2>¿Quiénes Somos?</h2>
+            <p>En Elizines Corporation, nos dedicamos a ofrecer soluciones innovadoras para empresas y personas, combinando tecnología y creatividad para crear un impacto positivo en el mundo.</p>
+        </section>
+
+        <!-- Servicios -->
+        <section id="services" class="services">
+            <h2>Nuestros Servicios</h2>
+            <p>Ofrecemos una amplia gama de servicios para ayudar a tu negocio a crecer:</p>
+            <ul>
+                <li>Desarrollo de software personalizado</li>
+                <li>Consultoría tecnológica</li>
+                <li>Marketing digital y diseño web</li>
+                <li>Automatización de procesos empresariales</li>
+            </ul>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contact" class="contact">
+            <h2>Contáctanos</h2>
+            <p>¿Interesado en trabajar con nosotros? ¡Escríbenos!</p>
+            <form>
+                <label for="name">Nombre:</label><br>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required><br><br>
+                
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" placeholder="Tu correo" required><br><br>
+                
+                <label for="message">Mensaje:</label><br>
+                <textarea id="message" name="message" rows="4" placeholder="Tu mensaje"></textarea><br><br>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Elizines Corporation. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
