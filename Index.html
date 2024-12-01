@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elizines Corporation</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza tu archivo CSS -->
+</head>
+
+<body>
+    <!-- Encabezado principal -->
+    <header class="main-header">
+        <div class="logo">Elizines Corporation</div>
+        <nav class="main-nav">
+            <button  id="darkModeToggle">🌙</button>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+            <ul class="menu-list">
+                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#games">Juegos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            
+    </header>
+<!-- class="menu-toggle" -->
+    <!-- Hero -->
+    <section class="hero">
+        <div>
+            <h1>Elizines Corporation</h1>
+            <p>El chiste se nos salió de las manos.</p>
+            <a href="#about" class="btn-primary">Conoce más</a>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="about" class="about">
+        <h2>¿Quiénes Somos?</h2>
+        <p>Somos una empresa medianamente ficticia con múltiples servicios y especialidades.</p>
+    </section>
+
+    <!-- Servicios -->
+    <section id="services">
+        <h2>Servicios</h2>
+        <div>
+            <p>Desarrollo de software</p>
+            <p>Servicio de Recursos Humanos</p>
+            <p>Servicio de cuidado a ciudadanos mayores</p>
+            <p>Servicio de docencia (Próximamente)</p>
+            <p>Servicio de psicología (Próximamente)</p>
+            <p>Servicio de mantenimiento de software y hardware (Próximamente)</p>
+        </div>
+    </section>
+
+    <!-- Juegos -->
+    <section id="games" class="games">
+        <h2>Nuestros Juegos</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <h3>Pokemon Hackrom</h3>
+                <p>En desarrollo</p>
+            </div>
+            <div class="game-card">
+                <h3>Mitzli</h3>
+                <a href="Mitzli.html">¡Juega Mitzli!</a>
+            </div>
+            <div class="game-card">
+                <h3>Juego 3</h3>
+                <p>Aún no existe</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="contact">
+        <h2>Contáctanos</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tu mensaje"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Creadores -->
+    <section class="creators">
+        <h2>Nuestro Equipo</h2>
+        <div class="creators-grid">
+            <div class="creator-card">
+                <h3>Alan Lara</h3>
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i> Facebook</a>
+            </div>
+            <div class="creator-card">
+                <h3>Angel Lopez</h3>
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i> Facebook</a>
+            </div>
+            <div class="creator-card">
+                <h3>Rosario Quicahua</h3>
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i> Facebook</a>
+            </div>
+            <div class="creator-card">
+                <h3>Adolfo Tapia</h3>
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i> Facebook</a>
+            </div>
+            <div class="creator-card">
+                <h3>Daniel Hernandez</h3>
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i> Facebook</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="main-footer">
+        <p>&copy; 2024 Elizines Corporation. Todos los derechos reservados.</p>
+        <address>
+            Contacto: <a href="mailto:info@elizines.com">info@elizines.com</a>
+        </address>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
