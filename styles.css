@@ -11,6 +11,7 @@ body {
     font-size: 16px;
     background-color: #f4f4f4;
     color: #333;
+    transition: background 0.3s, color 0.3s;
 }
 
 /* Header */
@@ -36,67 +37,32 @@ body {
     align-items: center;
 }
 
-.main-header .menu-list {
-    display: flex;
-    list-style: none;
+.sidebar {
+    height: 100%;
+    width: 0;
+    color: #f4f4f4;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    /*background-color: var(--header-background);*/
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-.main-header .menu-list li {
-    margin-left: 20px;
-}
-
-.main-header .menu-list a {
-    color: #fff;
+.sidebar a {
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 25px;
+    color: var(--header-text);
+    display: block;
+    transition: 0.3s;
 }
 
-.main-header .menu-list a:hover {
-    color: #1abc9c;
-}
-
-/* Botón de menú para móviles */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: #fff;
-    width: 20%;
-    height: 20%;
-
-}
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu-list {
-        display: none;
-        flex-direction: column;
-        background: #444;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        border-radius: 5px;
-        overflow: hidden;
-    }
-
-    .menu-list.active {
-        display: flex;
-    }
-
-    .menu-list li {
-        margin: 0;
-    }
-
-    .menu-list a {
-        padding: 10px 20px;
-        display: block;
-        color: #fff;
-    }
+.sidebar a:hover {
+    background-color: #575757;
 }
 
 /* Hero Section */
@@ -117,7 +83,7 @@ body {
     margin-bottom: 20px;
 }
 
-.hero .btn-primary {
+.btn-primary {
     background: #1abc9c;
     color: #fff;
     padding: 10px 20px;
@@ -126,7 +92,7 @@ body {
     transition: background 0.3s ease;
 }
 
-.hero .btn-primary:hover {
+ .btn-primary:hover {
     background: #16a085;
 }
 
@@ -151,6 +117,10 @@ p {
     background: #f9f9f9;
 }
 
+.about p {
+    color: #111;
+}
+
 /* Services Section */
 .services {
     background: #eee;
@@ -165,6 +135,11 @@ p {
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.services li {
+    list-style: none;
+    color: #111;
 }
 
 /* Games Section */
@@ -198,6 +173,10 @@ p {
 }
 
 /* Contact Section */
+.contact h2 {
+    color: #111;
+}
+
 .contact form {
     max-width: 600px;
     margin: 0 auto;
@@ -267,20 +246,21 @@ p {
 }
 
 /* Footer */
-.main-footer {
+footer {
     background: #333;
     color: #fff;
     text-align: center;
     padding: 10px 20px;
+    position: fixed;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: bottom 0.5s ease;
 }
 
-.main-footer a {
-    color: #1abc9c;
-    text-decoration: none;
-}
-
-.main-footer a:hover {
-    text-decoration: underline;
+footer.show {
+    bottom: 0;
 }
 
 /* Dark Mode */
@@ -289,10 +269,7 @@ body.dark-mode {
     color: #fff;
 }
 
-body.dark-mode .main-header {
-    background: #111;
-}
-
+body.dark-mode .main-header,
 body.dark-mode .menu-list {
     background: #111;
 }
@@ -306,4 +283,17 @@ body.dark-mode .creator-card,
 body.dark-mode .services p {
     background: #333;
     color: #fff;
+}
+
+body.dark-mode .contact h2 {
+    color: #fff;
+}
+
+body.dark-mode .sidebar {
+    /*background-color: #333;*/
+    background: #111;
+}
+
+body.dark-mode footer {
+    background: #111;
 }

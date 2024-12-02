@@ -1,3 +1,13 @@
+// Función para alternar el sidebar
+function toggleSidebar() {
+    var sidebar = document.getElementById("toggleSidebar");
+    if (sidebar.style.width === "300px") {
+        sidebar.style.width = "0";
+    } else {
+        sidebar.style.width = "300px";
+    }
+}
+
 // Cambiar entre modo claro y oscuro
 const toggleDarkMode = document.querySelector('#darkModeToggle');
 
@@ -11,23 +21,7 @@ if (localStorage.getItem('dark-mode') === 'enabled') {
     document.body.classList.add('dark-mode');
 }
 
-// Menú móvil
-const menuToggle = document.querySelector('.menu-toggle');
-const menuList = document.querySelector('.menu-list');
-
-// Toggle del menú en dispositivos pequeños
-menuToggle.addEventListener('click', () => {
-    menuList.classList.toggle('active');
-});
-
-// Función para cerrar el menú cuando se hace clic fuera de él
-document.addEventListener('click', (e) => {
-    if (!menuToggle.contains(e.target) && !menuList.contains(e.target)) {
-        menuList.classList.remove('active');
-    }
-});
-
-// Suavizar la transición entre las secciones del sitio
+// Suavizar la transición entre secciones
 const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
 
 smoothScrollLinks.forEach(link => {
@@ -38,6 +32,29 @@ smoothScrollLinks.forEach(link => {
         window.scrollTo({
             top: targetElement.offsetTop - 60, // Ajuste para el header fijo
             behavior: 'smooth'
+        });
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const downloadButtons = document.querySelectorAll(".downloadButton");
+
+    downloadButtons.forEach(button => {
+        button.addEventListener("click", (event) => {
+            const filename = button.getAttribute("data-filename");
+
+            if (filename) {
+                // Crear un enlace temporal para la descarga
+                const link = document.createElement("a");
+                link.href = filename; // Cambia esta ruta según tu estructura de carpetas
+                link.download = filename;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } else {
+                console.error("No se encontró el archivo para descargar.");
+            }
         });
     });
 });
