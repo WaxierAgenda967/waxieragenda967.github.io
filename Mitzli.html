@@ -13,21 +13,20 @@
     <!-- Encabezado -->
     <header class="main-header">
         <div class="logo">Elizines Corporation</div>
-        <nav class="main-nav">
-            <button  id="darkModeToggle">🌙</button>
-            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
-            <ul class="menu-list">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre">Sobre Mitzli</a></li>
-                <li><a href="#minijuegos">Minijuegos</a></li>
-                <li><a href="#descargar">Descargar</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="index.html">Otros Productos</a></li>
-                <li><a href="#redes">Redes de los creadores</a></li>
-            </ul>
-        </nav>
+        <button id="darkModeToggle" aria-label="Alternar modo oscuro">🌙</button>
+        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
     </header>
-
+    <div id="toggleSidebar" class="sidebar">
+        <ul class="menu-list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre">Sobre Mitzli</a></li>
+            <li><a href="#minijuegos">Minijuegos</a></li>
+            <li><a href="#descargar">Descargar</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="index.html">Otros Productos</a></li>
+            <li><a href="#redes">Redes de los creadores</a></li>
+        </ul>
+    </div>
     <!-- Sección de inicio -->
     <section id="inicio" class="hero">
         <div class="hero-content">
@@ -41,7 +40,7 @@
     <section id="sobre" class="about">
         <div class="container">
             <h2>¿Qué es Mitzli?</h2>
-            <p style="color: #333">
+            <p>
                 Mitzli es una aplicación diseñada para ofrecer entretenimiento y relajación a través de una serie de
                 minijuegos. Cada uno está pensado para ayudarte a desconectarte y disfrutar de tu tiempo libre.
             </p>
@@ -84,18 +83,21 @@
     <section id="descargar" class="download">
         <div class="container">
             <h2>Descarga Mitzli</h2>
-            <p style="color: #333">
+            <p>
                 Comienza a disfrutar de este programa hoy mismo. Haz clic en el botón para descargar la
                 aplicación.
             </p>
-            <a class="btn-primary" href="https://drive.google.com/drive/home">Descargar Programa</a>
-            <a class="btn-primary" href="https://drive.google.com/drive/home">Descargar Manual</a>
+            <a class="downloadButton btn-primary" data-filename="Miztli.jar">Descargar Programa</a>
+            <a class="downloadButton btn-primary" data-filename="Mitzli_Manual_de_Usuario.docx">Descargar Manual</a>
+            <br>
+            <br>
             <p class="note">Nota: Asegúrate de tener Java instalado en tu sistema. <br>
                 Si no tienes Java, dirígete a este enlace:
                 <a href="https://www.java.com/es/download/ie_manual.jsp">Java</a>
             </p>
         </div>
     </section>
+    
 
     <!-- Sección Redes de los Creadores -->
     <section id="redes" class="creators">
