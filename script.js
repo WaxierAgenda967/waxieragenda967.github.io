@@ -41,19 +41,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const downloadButtons = document.querySelectorAll(".downloadButton");
 
     downloadButtons.forEach(button => {
-        button.addEventListener("click", (event) => {
-            const filename = button.getAttribute("data-filename");
+        button.addEventListener("click", () => {
+            const fileUrl = button.getAttribute("data-url");
 
-            if (filename) {
-                // Crear un enlace temporal para la descarga
+            if (fileUrl) {
                 const link = document.createElement("a");
-                link.href = filename; // Cambia esta ruta según tu estructura de carpetas
-                link.download = filename;
+                link.href = fileUrl;
+                link.target = "_blank"; // Abre en nueva pestaña (opcional)
+                link.download = ""; // Sólo necesario si quieres forzar descarga
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
             } else {
-                console.error("No se encontró el archivo para descargar.");
+                console.error("No se encontró la URL para descargar.");
             }
         });
     });
